@@ -1,8 +1,44 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+	border: 1px solid grey;
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+section {
+	padding: 4% 0;
+}
+h1, h2 {
+	margin: 2% 0;
+}
+h1 {
+	font-size: 4rem;
+}
+h2 {
+	font-size: 3.5rem;
+}
 .topsection {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+}
+.bg-image {
+	background-image: url(https://media.istockphoto.com/photos/forest-wooden-table-background-summer-sunny-meadow-with-green-grass-picture-id1353553203?b=1&k=20&m=1353553203&s=170667a&w=0&h=QTyTGI9tWQluIlkmwW0s7Q4z7R_IT8egpzzHjW3cSas=) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 50vh;
 }
 .row {
 	display: flex;
@@ -10,7 +46,7 @@
 	flex-direction: row;
 	padding: 20px;
 }
-.description {
+.description p {
 	width: 200px;
 	text-align: center;
 	padding: 20%;
@@ -34,4 +70,35 @@ footer {
 	background-color: lightgrey;
 	text-align: center;
 	padding: 25px;
+}
+
+@media(max-width: 800px) {
+	.row {
+		flex-wrap: wrap;
+	}
+	.row img {
+		width: 20%;
+	}
+}
+@media(max-width: 500px) {
+	.links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.links button {
+		width: 40%;
+		margin: 1% 0;
+	}
+	.row {
+		flex-wrap: wrap;
+	}
+	.row img {
+		width: 40%;
+	}
+	/* button {
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+	} */
 }
